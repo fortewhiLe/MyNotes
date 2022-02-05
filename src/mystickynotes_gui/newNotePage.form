@@ -44,7 +44,7 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="btnClear" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                  <Component id="btnBacktoHomePage" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBacktoHomePageFromNewNotePage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
@@ -63,7 +63,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnSave" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnBacktoHomePage" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnBacktoHomePageFromNewNotePage" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
@@ -96,7 +96,7 @@
             <Property name="text" type="java.lang.String" value="CLEAR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnBacktoHomePage">
+        <Component class="javax.swing.JButton" name="btnBacktoHomePageFromNewNotePage">
           <Properties>
             <Property name="text" type="java.lang.String" value="BACK"/>
           </Properties>

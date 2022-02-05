@@ -31,7 +31,7 @@ public class newNotePage extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         btnSave = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
-        btnBacktoHomePage = new javax.swing.JButton();
+        btnBacktoHomePageFromNewNotePage = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,7 +43,7 @@ public class newNotePage extends javax.swing.JFrame {
 
         btnClear.setText("CLEAR");
 
-        btnBacktoHomePage.setText("BACK");
+        btnBacktoHomePageFromNewNotePage.setText("BACK");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -55,7 +55,7 @@ public class newNotePage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnClear)
                 .addGap(68, 68, 68)
-                .addComponent(btnBacktoHomePage)
+                .addComponent(btnBacktoHomePageFromNewNotePage)
                 .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(76, Short.MAX_VALUE)
@@ -71,7 +71,7 @@ public class newNotePage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnClear)
-                    .addComponent(btnBacktoHomePage))
+                    .addComponent(btnBacktoHomePageFromNewNotePage))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -125,7 +125,7 @@ public class newNotePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBacktoHomePage;
+    private javax.swing.JButton btnBacktoHomePageFromNewNotePage;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnSave;
     private javax.swing.JPanel jPanel1;
