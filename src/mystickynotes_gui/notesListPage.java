@@ -30,6 +30,7 @@ public class notesListPage extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblNotesList = new javax.swing.JTable();
         btnBackToHomeFromNotesList = new javax.swing.JButton();
+        lblNewNote = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,6 +56,14 @@ public class notesListPage extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblNotesList);
 
         btnBackToHomeFromNotesList.setText("BACK");
+        btnBackToHomeFromNotesList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackToHomeFromNotesListActionPerformed(evt);
+            }
+        });
+
+        lblNewNote.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        lblNewNote.setText("Notes List");
 
         javax.swing.GroupLayout pnlNotesListLayout = new javax.swing.GroupLayout(pnlNotesList);
         pnlNotesList.setLayout(pnlNotesListLayout);
@@ -66,13 +75,19 @@ public class notesListPage extends javax.swing.JFrame {
                     .addComponent(btnBackToHomeFromNotesList)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(13, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlNotesListLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblNewNote)
+                .addGap(143, 143, 143))
         );
         pnlNotesListLayout.setVerticalGroup(
             pnlNotesListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlNotesListLayout.createSequentialGroup()
-                .addContainerGap(102, Short.MAX_VALUE)
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addComponent(lblNewNote)
+                .addGap(38, 38, 38)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(44, 44, 44)
                 .addComponent(btnBackToHomeFromNotesList)
                 .addGap(27, 27, 27))
         );
@@ -90,6 +105,12 @@ public class notesListPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBackToHomeFromNotesListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToHomeFromNotesListActionPerformed
+        homePage home = new homePage();
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBackToHomeFromNotesListActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,6 +150,7 @@ public class notesListPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBackToHomeFromNotesList;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblNewNote;
     private javax.swing.JPanel pnlNotesList;
     private javax.swing.JTable tblNotesList;
     // End of variables declaration//GEN-END:variables

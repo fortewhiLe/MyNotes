@@ -37,8 +37,18 @@ public class homePage extends javax.swing.JFrame {
         jLabel1.setText("MyStickyNotes");
 
         btnNew.setText("NEW");
+        btnNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewActionPerformed(evt);
+            }
+        });
 
         btnNotesList.setText("NOTES LIST");
+        btnNotesList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNotesListActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlHomePageLayout = new javax.swing.GroupLayout(pnlHomePage);
         pnlHomePage.setLayout(pnlHomePageLayout);
@@ -84,6 +94,18 @@ public class homePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
+        newNotePage newNote = new newNotePage();
+        newNote.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnNewActionPerformed
+
+    private void btnNotesListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotesListActionPerformed
+        notesListPage noteList = new notesListPage();
+        noteList.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnNotesListActionPerformed
 
     /**
      * @param args the command line arguments

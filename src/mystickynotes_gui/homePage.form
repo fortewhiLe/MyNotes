@@ -87,11 +87,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="NEW"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnNotesList">
           <Properties>
             <Property name="text" type="java.lang.String" value="NOTES LIST"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNotesListActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

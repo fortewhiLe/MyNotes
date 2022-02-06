@@ -28,22 +28,36 @@ public class newNotePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtNewNote = new javax.swing.JTextArea();
         btnSave = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         btnBacktoHomePageFromNewNotePage = new javax.swing.JButton();
+        lblNewNote = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtNewNote.setColumns(20);
+        txtNewNote.setRows(5);
+        jScrollPane1.setViewportView(txtNewNote);
 
         btnSave.setText("SAVE");
 
         btnClear.setText("CLEAR");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
         btnBacktoHomePageFromNewNotePage.setText("BACK");
+        btnBacktoHomePageFromNewNotePage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBacktoHomePageFromNewNotePageActionPerformed(evt);
+            }
+        });
+
+        lblNewNote.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        lblNewNote.setText("New Note");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -59,13 +73,20 @@ public class newNotePage extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(76, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblNewNote)
+                        .addGap(135, 135, 135))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(15, 15, 15)
+                .addComponent(lblNewNote)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -88,6 +109,16 @@ public class newNotePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        txtNewNote.setText("");
+    }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnBacktoHomePageFromNewNotePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBacktoHomePageFromNewNotePageActionPerformed
+        homePage home = new homePage();
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBacktoHomePageFromNewNotePageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +161,7 @@ public class newNotePage extends javax.swing.JFrame {
     private javax.swing.JButton btnSave;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblNewNote;
+    private javax.swing.JTextArea txtNewNote;
     // End of variables declaration//GEN-END:variables
 }
